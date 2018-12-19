@@ -84,7 +84,7 @@ legend{
                                 if ((pf.getLogin().equals(login))&&(pf.getSenha().equals(senha)))
                                     {
                                         
-                                    
+                                    certo=1;
                                         
                                     if (pf.getFuncao().equals(funcao)){    
                                     
@@ -99,10 +99,13 @@ legend{
                 <%} %>
                 
 		<%}else{ %>
-              
+             
                 <%} %>
                 <%} %>
-                  <META http-equiv="refresh" content="1;URL=erroLogin.html"> 
+                <%if (certo==0){%>
+                <META http-equiv="refresh" content="1;URL=erroLogin.html">
+                <%}%>
+                   
         </form>
               
     </body>
